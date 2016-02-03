@@ -15,10 +15,46 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Open"
-        android:id="@+id/btnOpen"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
+        android:text="Send"
+        android:id="@+id/btnSend"
         android:onClick="openAnotherActivity"
-        android:layout_alignParentEnd="true" />
+        android:layout_below="@+id/txtLastName"
+        android:layout_toEndOf="@+id/textView3"
+        android:layout_marginTop="34dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtName"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/btnSend" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Your Name"
+        android:id="@+id/textView2"
+        android:layout_alignTop="@+id/txtName"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Your Last Name"
+        android:id="@+id/textView3"
+        android:layout_marginTop="28dp"
+        android:layout_below="@+id/txtName"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtLastName"
+        android:layout_alignTop="@+id/textView3"
+        android:layout_alignStart="@+id/txtName"
+        android:layout_alignEnd="@+id/txtName" />
+
 </RelativeLayout>

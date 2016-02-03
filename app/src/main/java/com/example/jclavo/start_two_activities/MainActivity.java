@@ -9,6 +9,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -54,9 +56,18 @@ public class MainActivity extends AppCompatActivity {
     //open another activity
     public void openAnotherActivity(View v)
     {
+
+        EditText txtName = (EditText)findViewById(R.id.txtName);
+        EditText txtLastName = (EditText)findViewById(R.id.txtLastName);
+
+        String name,lastName;
+
+        name = txtName.getText().toString();
+        lastName = txtLastName.getText().toString();
+
         Intent i = new Intent(this, TwoActivity.class );
-        i.putExtra("nombre","jose");
-        i.putExtra("apellido","clavo");
+        i.putExtra("nombre",name);
+        i.putExtra("apellido",lastName);
         startActivity(i);
 
     }

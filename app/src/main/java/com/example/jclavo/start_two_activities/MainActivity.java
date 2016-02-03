@@ -55,6 +55,9 @@ public class MainActivity extends AppCompatActivity {
     public void openAnotherActivity(View v)
     {
         Intent i = new Intent(this, TwoActivity.class );
+        i.putExtra("nombre","jose");
+        i.putExtra("apellido","clavo");
         startActivity(i);
+
     }
 }
